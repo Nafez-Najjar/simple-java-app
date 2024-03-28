@@ -13,7 +13,7 @@ pipeline{
         }
         stage('push'){
             steps{
-                scrips{
+                script{
                     withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'Password', usernameVariable: 'Username')]) {
                         sh 'docker login --username $Username --password $Password'
                         sh 'docker tag javapp $Username/javaapp'
