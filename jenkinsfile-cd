@@ -26,7 +26,7 @@ pipeline{
         stage('deploy'){
             steps{
                 script{
-                    withAWS(credentials:'a7205a87-4cde-4021-8c40-7e67f39e5390',region:'us-east-1') {
+                    withAWS(credentials:'AKIAXYJ3KDPQQF2HGY5L',region:'us-east-1') {
                        sh 'aws eks update-kubeconfig --region us-east-1 --name jenkinscourse'
                        sh 'kubectl apply -f ./k8s/deployment.yaml'
 }
