@@ -30,4 +30,4 @@ jobs:
           uses: docker/build-push-action@v5
           with:
             push: true
-            tags: nnajjar85/java:$GITHUB_REF_NAME
+            tags: nnajjar85/java:main
